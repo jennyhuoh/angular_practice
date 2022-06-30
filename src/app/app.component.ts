@@ -30,9 +30,14 @@ export class AppComponent {
     console.log(this.todoItems)
   }
   removeTodo(index: any) {
-    let newArr = this.todoItems.filter(function(item){
+    let newArr = this.todoItems.filter(item => {
       return item.id !== index
     })
     this.todoItems = newArr
+  }
+  setItem(obj: any){
+    console.log(obj)
+    let item = this.todoItems.findIndex(item => item.id === obj.id)
+    this.todoItems[item] = obj
   }
 }

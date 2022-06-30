@@ -10,11 +10,19 @@ export class TodoItemsComponent implements OnInit {
   
   @Input() items: TodoItem[] = [];
   @Output() removeItem = new EventEmitter()
+  @Output() setDone = new EventEmitter()
   constructor() { }
 
   ngOnInit(): void {
   }
   removeTodo(index: any){
     this.removeItem.emit(index)
+  }
+  setItem(id: any, value: string, status: boolean){
+    this.setDone.emit({
+      id: id,
+      value: value,
+      done: !status
+    })
   }
 }
