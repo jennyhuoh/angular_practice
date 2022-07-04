@@ -1,6 +1,12 @@
 <ul>
-    <li *ngFor="let item of items">
+    <li *ngFor="let item of getTodoList()">
         <label htmlFor="chk_{{item.id}}"><input id="chk_{{item.id}}" type="checkbox" [checked]="item.done" (click)="setItem(item.id, item.value, item.done)">{{item.value}}</label>
         <button (click)="removeTodo(item.id)">刪除</button><span *ngIf="item.done">已完成</span>
     </li>
+    <div>
+        <strong>TodoItemsComponent中測試strong標籤</strong>
+    </div>
+    <div>
+        <span class="blue">TodoItemsComponent中測試blue class</span>
+    </div>
 </ul>
