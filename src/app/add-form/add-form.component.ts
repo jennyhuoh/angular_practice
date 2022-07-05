@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { TodoListService } from '../todo-list.service';
 
 @Component({
   selector: 'app-add-form',
@@ -9,15 +10,16 @@ export class AddFormComponent implements OnInit {
   
   placeholderText='請輸入待辦事項'
  
-  constructor() { }
+  constructor(private todoListService: TodoListService) { }
 
   ngOnInit(): void {
   }
   @Input() todoText: string=''
-  @Output() addTodoItem = new EventEmitter()
+  // @Output() addTodoItem = new EventEmitter()
+  
   addTodo(){
     console.log(`輸入的文字為：${this.todoText}`)
-    this.addTodoItem.emit(this.todoText)
-  this.todoText=''
+    this.todoListService.addTodo(this.todoText)
+    this.todoText=''
   }
 }
