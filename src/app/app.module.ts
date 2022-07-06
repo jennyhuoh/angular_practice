@@ -9,13 +9,15 @@ import { HeaderComponent } from './header/header.component';
 import { AddFormComponent } from './add-form/add-form.component';
 import { TodoItemsComponent } from './todo-items/todo-items.component';
 import { TodoListService } from './todo-list.service';
+import { TodoDonePipe } from './todo-done.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AddFormComponent,
-    TodoItemsComponent
+    TodoItemsComponent,
+    TodoDonePipe
   ],
   imports: [
     BrowserModule,
