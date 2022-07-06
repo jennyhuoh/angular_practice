@@ -1,6 +1,0 @@
-<ul>
-    <li *ngFor="let item of getTodoList()">
-        <label htmlFor="chk_{{item.id}}"><input id="chk_{{item.id}}" type="checkbox" [checked]="item.done" (click)="setItem(item.id, item.value, item.done)">{{item.value}}</label>
-        <button (click)="removeTodo(item.id)">刪除</button><span>{{item.done | todoDone: true}}</span>
-    </li>
-</ul>

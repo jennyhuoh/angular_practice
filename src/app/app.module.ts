@@ -6,26 +6,21 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { AddFormComponent } from './add-form/add-form.component';
-import { TodoItemsComponent } from './todo-items/todo-items.component';
-import { TodoListService } from './todo-list.service';
-import { TodoDonePipe } from './todo-done.pipe';
+import { TodoAppModule } from './todo-app/todo-app.module';
+// import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    AddFormComponent,
-    TodoItemsComponent,
-    TodoDonePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    TodoAppModule
   ],
-  providers: [TodoListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
