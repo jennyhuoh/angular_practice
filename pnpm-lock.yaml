@@ -24,6 +24,7 @@ specifiers:
   rxjs: ~7.5.0
   tslib: ^2.3.0
   typescript: ~4.7.2
+  web-animations-js: ^2.3.2
   zone.js: ~0.11.4
 
 dependencies:
@@ -39,6 +40,7 @@ dependencies:
   '@angular/router': 14.0.6_v4xkvekty4uhy7tfslqoygdzku
   rxjs: 7.5.6
   tslib: 2.4.0
+  web-animations-js: 2.3.2
   zone.js: 0.11.6
 
 devDependencies:
@@ -6971,6 +6973,10 @@ packages:
     dependencies:
       defaults: 1.0.3
     dev: true
+
+  /web-animations-js/2.3.2:
+    resolution: {integrity: sha512-TOMFWtQdxzjWp8qx4DAraTWTsdhxVSiWa6NkPFSaPtZ1diKUxTn4yTix73A1euG1WbSOMMPcY51cnjTIHrGtDA==}
+    dev: false
 
   /webidl-conversions/4.0.2:
     resolution: {integrity: sha512-YQ+BmxuTgd6UXZW3+ICGfyqRyHXVlD5GtQr5+qjiNW7bF0cqrzX500HVXPBOvgXb5YnzDd+h0zqyv61KUD7+Sg==}

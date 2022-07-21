@@ -19,7 +19,7 @@ import { TodoAppModule } from './todo-app/todo-app.module';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    TodoAppModule
+    TodoAppModule,
   ],
   bootstrap: [AppComponent]
 })

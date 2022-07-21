@@ -1,5 +1,7 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { TodoListService } from '../todo-list.service';
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-add-form',
@@ -22,4 +24,5 @@ export class AddFormComponent implements OnInit {
     this.todoListService.addTodo(this.todoText)
     this.todoText=''
   }
+  
 }
